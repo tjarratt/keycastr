@@ -42,6 +42,7 @@
 		3D3F56CB0F337533001C7272 /* NSUserDefaults+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F56CA0F337533001C7272 /* NSUserDefaults+Utility.m */; };
 		3D66FC520F539C290034ECC1 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DF8835C0F5254F9005FD1C6 /* Sparkle.framework */; };
 		3DF883890F5256FF005FD1C6 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF8835C0F5254F9005FD1C6 /* Sparkle.framework */; };
+		5A941DAC16ED3DFA00DA082E /* CCCFx.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A941DAB16ED3DFA00DA082E /* CCCFx.m */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -162,6 +163,8 @@
 		3DC3146F0F33EEF400B67D65 /* KCKeystroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCKeystroke.h; sourceTree = "<group>"; };
 		3DC314700F33EEF400B67D65 /* KCKeystroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCKeystroke.m; sourceTree = "<group>"; };
 		3DF8835C0F5254F9005FD1C6 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		5A941DAA16ED3DFA00DA082E /* CCCFx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCFx.h; sourceTree = "<group>"; };
+		5A941DAB16ED3DFA00DA082E /* CCCFx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCFx.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* KeyCastr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyCastr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -328,6 +331,8 @@
 		3D1648A30F451CDA00CA65AD /* Svelte */ = {
 			isa = PBXGroup;
 			children = (
+				5A941DAA16ED3DFA00DA082E /* CCCFx.h */,
+				5A941DAB16ED3DFA00DA082E /* CCCFx.m */,
 				3D1648AD0F451D4500CA65AD /* Svelte-Info.plist */,
 				3D1648B80F451DAA00CA65AD /* Svelte.nib */,
 				3D1648BA0F451DC300CA65AD /* SvelteVisualizer.h */,
@@ -520,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D1648BC0F451DC300CA65AD /* SvelteVisualizer.m in Sources */,
+				5A941DAC16ED3DFA00DA082E /* CCCFx.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

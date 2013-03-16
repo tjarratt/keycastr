@@ -28,6 +28,8 @@
 #import "SvelteVisualizer.h"
 #import "NSBezierPath+RoundedRect.h"
 
+static const float FADE_INCREMENT = .1f;
+
 @implementation SvelteVisualizerFactory
 
 -(NSString*) visualizerNibName
@@ -175,6 +177,8 @@
 	_visualizerView = [[SvelteVisualizerView alloc] initWithFrame:r];
 	[_visualizerWindow setContentView:_visualizerView];
 
+	_fx = [[CCCFx alloc] initWithModel:self];
+
 	return self;
 }
 
@@ -196,11 +200,37 @@
 -(void) noteKeyEvent:(KCKeystroke*)keystroke
 {
 	[_visualizerView noteKeyEvent:keystroke];
+	[_fx start];
 }
 
 -(void) noteFlagsChanged:(uint32_t)flags
 {
 	[_visualizerView noteFlagsChanged:flags];
+}
+
+- (void)reset {
+	[_visualizerWindow setAlphaValue:1.0];
+}
+
+- (NSTimeInterval)delay {
+	return 1.;
+}
+
+- (unsigned int)framesPerSecond {
+	return 30;
+}
+
+- (BOOL)hasNextValue {
+	return [_visualizerWindow alphaValue] > 0;
+}
+
+- (void)applyNextValue {
+	float a = [_visualizerWindow alphaValue] - FADE_INCREMENT;
+	if (a <= 0) {
+		[_visualizerWindow setAlphaValue:0.];
+	} else {
+		[_visualizerWindow setAlphaValue:a];
+	}
 }
 
 @end

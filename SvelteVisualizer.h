@@ -27,6 +27,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "KCVisualizer.h"
+#import "CCCFx.h"
 
 @interface SvelteVisualizerFactory : KCVisualizerFactory <KCVisualizerFactory>
 {
@@ -49,10 +50,11 @@
 
 @end
 
-@interface SvelteVisualizer : KCVisualizer <KCVisualizer>
+@interface SvelteVisualizer : KCVisualizer <KCVisualizer, CCCFxModel>
 {
 	NSWindow* _visualizerWindow;
 	SvelteVisualizerView* _visualizerView;
+	CCCFx* _fx;
 }
 
 -(NSString*) visualizerName;
