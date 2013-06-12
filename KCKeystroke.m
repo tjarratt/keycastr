@@ -64,7 +64,7 @@
 
 -(NSString*) convertToString
 {
-	return [[KCKeystrokeTransformer sharedTransformer] transformedValue:self];
+	return [[[KCKeystrokeTransformer sharedTransformer] transformedValue:self] stringByReplacingOccurrencesOfString:@"" withString:@""];
 }
 
 @end
